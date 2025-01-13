@@ -1,6 +1,4 @@
-import { BackendStorage } from "./BackendStorage";
-import type { BaseStorage } from "./BaseStorage";
-import { FrontendStorage } from "./FrontendStorage";
+import { BackendStorage, BaseStorage, FrontendStorage } from "./storages";
 
 export class ContextManager {
   private static _instance: BaseStorage | null = null;

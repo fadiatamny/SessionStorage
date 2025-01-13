@@ -1,4 +1,4 @@
-import { BaseStorage } from "./BaseStorage";
+import { BaseStorage } from "../BaseStorage";
 
 export class FrontendStorage extends BaseStorage {
   async set<T>(key: string, value: T): Promise<void> {

@@ -1,12 +1,5 @@
-import { BaseStorage } from "./BaseStorage";
-
-type AsyncLocalStorageClass<T> = new () => AsyncLocalStorageInstance<T>;
-
-interface AsyncLocalStorageInstance<T> {
-  getStore(): T | undefined;
-  enterWith(store: T): void;
-  run<R>(store: T, callback: (...args: any[]) => R, ...args: any[]): R;
-}
+import { BaseStorage } from "../BaseStorage";
+import { AsyncLocalStorageClass, AsyncLocalStorageInstance } from "./types";
 
 let AsyncLocalStorage: AsyncLocalStorageClass<Map<string, any>>;
 if (typeof window === "undefined") {
