@@ -1,6 +1,6 @@
 import { BackendStorage, BaseStorage, FrontendStorage } from "./storages";
 
-export class ContextManager {
+export class SessionStorage {
   private static _instance: BaseStorage | null = null;
   public static get instance() {
     if (!this._instance) {
