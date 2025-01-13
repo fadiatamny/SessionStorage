@@ -1,0 +1,20 @@
+{
+  "name": "session-storage",
+  "description": "Cross front-back lib to have async session storage object to use for managing context",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "prepack": "npm run build"
+  },
+  "author": "fadiatamny@gmail.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fadiatamny/SessionStorage.git"
+  },
+  "license": "GPL-3.0-only",
+  "devDependencies": {
+    "@types/node": "^22.10.6",
+    "typescript": "^5.7.3"
+  }
+}
