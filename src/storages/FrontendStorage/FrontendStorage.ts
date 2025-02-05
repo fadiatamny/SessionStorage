@@ -1,20 +1,20 @@
 import { BaseStorage } from "../BaseStorage";
 
 export class FrontendStorage extends BaseStorage {
-  async set<T>(key: string, value: T): Promise<void> {
+  public async set<T>(key: string, value: T): Promise<void> {
     sessionStorage.setItem(key, JSON.stringify(value));
   }
 
-  async get<T>(key: string): Promise<T | null> {
+  public async get<T>(key: string): Promise<T | null> {
     const value = sessionStorage.getItem(key);
     return value ? JSON.parse(value) : null;
   }
 
-  async clear(): Promise<void> {
+  public async clear(): Promise<void> {
     sessionStorage.clear();
   }
 
-  async all(): Promise<Record<string, unknown>> {
+  public async dump(): Promise<Record<string, unknown>> {
     const result: Record<string, unknown> = {};
     for (let i = 0; i < sessionStorage.length; i++) {
       const key = sessionStorage.key(i);
